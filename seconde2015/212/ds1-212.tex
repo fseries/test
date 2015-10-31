@@ -1,0 +1,156 @@
+\documentclass[a4paper,12pt,twocolumn,landscape]{article}
+
+\usepackage{FabZ}
+\usepackage{vecteurs}
+\usepackage{repere}
+
+\usepackage{geometry}
+\geometry{hmargin=0.5cm,vmargin=1.5cm}
+
+\newcommand{\milieu}[6]{$\pointcoord{A_{\theenumi}}{#1}{#2}$ et $\pointcoord{B_{\theenumi}}{#3}{#4}$ \hfill \reponseEX{$\pointcoord{M_{\theenumi}}{#5}{#6}$}}
+
+\newcommand{\extremite}[6]{$\pointcoord{A_{\theenumi}}{#1}{#2}$ et $\pointcoord{M_{\theenumi}}{#3}{#4}$ \hfill \reponseEX{$\pointcoord{B_{\theenumi}}{#5}{#6}$}}
+
+\newcommand{\longueur}[5]{$\pointcoord{A_{\theenumi}}{#1}{#2}$ et $\pointcoord{B_{\theenumi}}{#3}{#4}$ \hfill \reponseEX{Longueur $A_{\theenumi}B_{\theenumi}$ = $#5$}}
+
+\newcommand{\quadrilatere}[9]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{B_\theenumi}{#3}{#4}$ $\pointcoord{C_{\theenumi}}{#5}{#6}$, $\pointcoord{D_\theenumi}{#7}{#8}$ \\ \textcolor{red}{$A_{\theenumi}B_{\theenumi}C_{\theenumi}D_{\theenumi}$ est un #9.}}
+
+\newcommand{\parallelogrammeManqueA}[8]{$\pointcoord{B_{\theenumi}}{#1}{#2}$, $\pointcoord{C_{\theenumi}}{#3}{#4}$ $\pointcoord{D_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{A_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\parallelogrammeManqueB}[8]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{C_{\theenumi}}{#3}{#4}$ $\pointcoord{D_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{B_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\parallelogrammeManqueC}[8]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{B_{\theenumi}}{#3}{#4}$ $\pointcoord{D_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{C_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\parallelogrammeManqueD}[8]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{B_{\theenumi}}{#3}{#4}$ $\pointcoord{C_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{D_{\theenumi}}{#7}{#8}$}}
+
+%
+%\setlength{\headheight}{0pt}
+%\pagestyle{fancyplain}
+%\fancyhf{}
+%\lhead[]{\textbf{TD Vecteurs}}
+%\chead[]{}
+%\rhead[]{}
+%
+%\lfoot[]{}
+%\cfoot[]{}
+%\rfoot[]{}
+%%\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+
+\fancypagestyle{sujet1}
+{
+	\setlength{\headheight}{0em}
+	\fancyhf{}
+	\lhead[]{\textbf{Mathématiques\\DS1 -- Sujet 1}}
+	\chead[]{Seconde 12\\ lundi 28 septembre 2015}
+	\rhead[]{Séquence 1\\ Repérage dans le plan}
+
+	\lfoot[]{}
+	\cfoot[]{}
+	\rfoot[]{}
+%	\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+}
+
+\fancypagestyle{correction1}
+{
+	\setlength{\headheight}{0em}
+	\fancyhf{}
+	\lhead[]{\textbf{Mathématiques\\DS1 -- Sujet 1 -- Éléments de correction}}
+	\chead[]{Seconde 12\\ lundi 28 septembre 2015}
+	\rhead[]{Séquence 1\\ Repérage dans le plan}
+
+	\lfoot[]{}
+	\cfoot[]{}
+	\rfoot[]{}
+%	\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+}
+
+\fancypagestyle{sujet2}
+{
+	\setlength{\headheight}{0em}
+	\fancyhf{}
+	\lhead[]{\textbf{Mathématiques\\DS1 -- Sujet 2}}
+	\chead[]{Seconde 12\\ lundi 28 septembre 2015}
+	\rhead[]{Séquence 1\\ Repérage dans le plan}
+
+	\lfoot[]{}
+	\cfoot[]{}
+	\rfoot[]{}
+%	\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+}
+
+\fancypagestyle{correction2}
+{
+	\setlength{\headheight}{0em}
+	\fancyhf{}
+	\lhead[]{\textbf{Mathématiques\\DS1 -- Sujet 2 -- Éléments de correction}}
+	\chead[]{Seconde 12\\ lundi 28 septembre 2015}
+	\rhead[]{Séquence 1\\ Repérage dans le plan}
+
+	\lfoot[]{}
+	\cfoot[]{}
+	\rfoot[]{}
+%	\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+}
+
+\fancypagestyle{vide}
+{
+	\setlength{\headheight}{0em}
+	\pagestyle{fancyplain}
+	\def\headrulewidth{0em}
+	\fancyhf{}
+	\lhead[]{}
+	\chead[]{}
+	\rhead[]{}
+	
+	\lfoot[]{}
+	\cfoot[]{}
+	\rfoot[]{}
+%	\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+}
+
+\usetikzlibrary{fadings}
+\newcommand{\Fin}{node[xshift=-1.5ex,rotate=10]{F}
+node[rotate=170]{i}
+node[xshift=1.5ex,rotate=45]{n}}
+
+\newcommand{\bonnesvacances}{node[xshift=0ex,rotate=10]{B}
+node[xshift=1*1.5ex,rotate=170]{o}
+node[xshift=2*1.5ex,rotate=45]{n}
+node[xshift=3*1.5ex,rotate=128]{n}
+node[xshift=4*1.5ex,rotate=75]{e}
+node[xshift=5*1.5ex,rotate=130]{s}
+node[xshift=6*1.5ex,rotate=85]{~}
+node[xshift=7*1.5ex,rotate=128]{v}
+node[xshift=8*1.5ex,rotate=43]{a}
+node[xshift=9*1.5ex,rotate=4]{c}
+node[xshift=10*1.5ex,rotate=145]{a}
+node[xshift=11*1.5ex,rotate=5]{n}
+node[xshift=12*1.5ex,rotate=25]{c}
+node[xshift=13*1.5ex,rotate=105]{e}
+node[xshift=14*1.5ex,rotate=45]{s}
+}
+
+
+\begin{document}
+
+\vspace*{1em}
+
+\input{ds1-212-sujet1}
+
+\newpage
+\vspace*{1em}
+
+\input{ds1-212-correction1}
+
+
+\newpage
+\vspace*{1em}
+
+\input{ds1-212-sujet2}
+
+\newpage
+\vspace*{1em}
+
+\input{ds1-212-correction2}
+
+\end{document}

@@ -1,0 +1,160 @@
+\begin{minipage}{0.45\textwidth}
+\thispagestyle{correction2}
+
+
+\vspace*{1em}
+
+
+\exercice
+On veut que $ABCD$ soit un parallélogramme. On sait que les diagonales d'un parallélogramme ont même milieu. $[AC]$ et $[BD]$ doivent donc avoir le même milieu.\\ On peut déterminer le milieu $M$ de $[BD]$~: $\pointcoord{M}{7}{5}$.\\ Il doit être le milieu de $[AC]$ également.
+
+Soit $\pointcoord{M}{7}{5}$ milieu de $[AC]$~:\\[1em]
+\begin{minipage}{0.5\textwidth}
+$
+\begin{array}{rl}
+	7	&=	\dfrac{ 1 + x_C}{2} \\
+	14	&=	1 + x_C \\
+	13	&=	x_C
+  \end{array}
+$
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+$
+\begin{array}{rl}
+	5	&=	\dfrac{ 1 + y_C}{2} \\
+	10	&=	1 + y_C \\
+	9	&=	y_C
+  \end{array}
+$
+\end{minipage}\\[1em]
+
+Donc le point $C$ a pour coordonnées$\pointcoord{~}{13}{9}$.
+\begin{center}
+	\fbox{$\pointcoord{C}{13}{9}$}
+\end{center}
+
+\textbf{\underline{Remarque :} Il n'était pas demandé de placer le point $C$ ni de tracer le parallélogramme~!}
+
+\begin{center}
+
+\begin{tikzpicture}[scale=0.6,every node/.style={scale=0.6}]
+
+%\coordinate (X) at (-0.5,-0.5);
+%\coordinate (Y) at (13,13);
+%\clip (X) rectangle (Y);
+\placerpoint{A}{1}{1}{below left};
+\placerpoint{B}{10}{5}{below right};
+\placerpoint{D}{4}{5}{above left};
+\placerpoint{C}{13}{9}{below right}
+\placerpoint{M}{7}{5}{above left};
+\draw[very thick,red] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[very thick,red] (D) -- (M) node[midway,sloped] {$/$};
+\draw[very thick,red] (B) -- (M) node[midway,sloped] {$/$};
+\draw[very thick,red] (A) -- (M) node[midway,very thick,sloped] {$//$};
+\draw[very thick,red] (C) -- (M) node[midway,very thick,sloped] {$//$};
+\repereOIJ{-1}{15}{-1}{11};
+\foreach \r in {5,10}
+    \draw[thick, below right] (\r,0) node{\r};
+\foreach \r in {5,10}
+    \draw[thick, above left] (0,\r) node{\r};
+
+\end{tikzpicture}
+
+\end{center}
+
+\end{minipage}
+
+\vspace*{-2em}
+
+\newpage
+
+\begin{minipage}{0.45\textwidth}
+\thispagestyle{correction2}
+
+\vspace*{1em}
+
+\exercice
+On se place dans le repère~\emph{orthonormé}\rep{O}{I}{J}. Dans ce repère, on considère les points $\pointcoord{A}{-3}{0}$, $\pointcoord{B}{-2}{-3}$ et $\pointcoord{C}{10}{3}$.\\Vos réponses seront argumentées.
+
+	\begin{enumerate}
+		\item $CB = \sqrt{180}$ et $CA = \sqrt{178}$.\\
+				$CB \neq CA$ donc le point $A$ n'appartient pas au cercle $\mathscr{C}$ de centre $C$ passant par~$B$.
+		\item De même, $CB \neq CA$ donc le point $C$ n'appartient pas à la médiatrice de $\left[AB\right]$.
+%		\item Déterminer les coordonnées de $Z$ pour que $AZBC$ soit un parallélogramme.
+	\end{enumerate}
+
+\exercice
+\begin{enumerate}
+	\item Dans le repère\rep{O}{I}{J}~orthonormé, on calcule~:\\ $AB=\sqrt{\left(-33 - 42 \right) ^ 2 + \left( - 67 - \left( - 42 \right) \right) ^ 2}$\\
+			$AB=\sqrt{\left(75 \right) ^ 2 + \left(-25 \right) ^ 2}$\\
+			$AB=\sqrt{5625 + 625}$\\
+			$AB=\sqrt{6250}$\\[1em]
+			De même, on obtient~:\\ $AC = \sqrt{6250}$ et $BC = \sqrt{12500}$\\[1em]
+			On a $AB$ = $AC$ donc le triangle $ABC$ est \textbf{isocèle}.\\[1em]
+			De plus, $BC^2 = \left(\sqrt{12500}\right)^2 = 12500$ et\\ $AB^2 + AC^2 = \left(\sqrt{6250}\right)^2 + \left(\sqrt{6250}\right)^2 = 12500$\\[1em]
+			D'où, $BC^2 = AB^2 + AC^2$\\[1em]
+			D'après la réciproque du théorème de Pythagore, le triangle $ABC$ est \textbf{rectangle} en $A$.\\[1em]
+			Conclusion~: \fbox{Le triangle $ABC$ est \textbf{rectangle isocèle en $A$}.}\\
+\end{enumerate}
+
+
+\end{minipage}
+
+\newpage
+
+\begin{minipage}{0.45\textwidth}
+\thispagestyle{vide}
+
+\vspace*{1em}
+
+
+\begin{enumerate}
+	\setcounter{enumi}{1}
+	\item Dans le repère\rep{O}{I}{J},\\[1em]
+			$x_D = \dfrac{42 + (-33)}{2} = \dfrac{9}{2} = 4,5$ et\\
+			$y_D = \dfrac{-42 + (-67)}{2} = \dfrac{-109}{2} = -54,5$\\[1em]
+			Donc \fbox{$\pointcoord{D}{\dfrac{9}{2}}{\dfrac{-109}{2}}$}\\[1em]
+			De même, on a~:\\[1em] \fbox{$\pointcoord{E}{-8}{-17}$} et \fbox{$\pointcoord{F}{\dfrac{59}{2}}{ - \dfrac{9}{2}}$}
+	\item Un carré est un parallélogramme particulier, commençons par montrer que $ADEF$ est un parallélogramme~:\\
+			Soit $M$ milieu de $[AE]$, $\pointcoord{M}{17}{ - \dfrac{59}{2}}$\\
+			Soit $N$ milieu de $[DF]$, $\pointcoord{N}{17}{ - \dfrac{59}{2}}$\\
+			$M$ et $N$ sont \textbf{confondus}.\\
+			Un quadrilatère dont les diagonales ont leurs milieux \textbf{confondus} est un parallélogramme. $M$ et $N$ sont confondus donc le quadrilatère $ADEF$ est un parallélogramme.\\[1em]
+			$AE = \sqrt{3125}$ et $DF = \sqrt{3125}$\\
+			Un parallélogramme dont les \textbf{diagonales ont même longueur} est un rectangle. $AE = DF$ donc le parallélogramme $ADEF$ est un rectangle.\\[1em]
+			$AD = \sqrt{1562,5}$ et $DE = \sqrt{1562,5}$\\			
+			Un rectangle qui a \textbf{deux côtés consécutifs de même longueur} est un carré. $AD = DE$ donc le rectangle $ADEF$ est un carré.\\
+			
+			\fbox{Donc le quadrilatère $ADEF$ est un carré.}\\
+\end{enumerate}
+
+\end{minipage}
+
+\newpage
+
+\begin{minipage}{0.45\textwidth}
+\thispagestyle{correction2}
+
+\vspace*{1em}
+
+\begin{enumerate}
+	\setcounter{enumi}{3}
+	\item D'après la question précédente, on sait que $ADEF$ est un carré donc en particulier que $DE = EF$ et que $\widehat{DEF} = 90°$.\\[1em]
+			\fbox{Donc le triangle $DEF$ est \textbf{rectangle isocèle}.}
+	\item Dans le \emph{repère\rep{A}{B}{C}}, $\pointcoord{A}{0}{0}$ ; $\pointcoord{B}{1}{0}$ ; $\pointcoord{C}{0}{1}$ ; $\pointcoord{D}{\dfrac{1}{2}}{0}$ ; $\pointcoord{E}{\dfrac{1}{2}}{\dfrac{1}{2}}$ et $\pointcoord{F}{0}{\dfrac{1}{2}}$.
+	\item Le repère\rep{A}{B}{C} est \textbf{orthonormé} ($AB = AC$ et $\widehat{BAC} = 90°$ OU $ABC$ rectangle isocèle en $A$) \textbf{donc} on peut déterminer la longueur $AB$ dans ce repère.
+\end{enumerate}
+
+
+
+\vspace*{1em}
+\centering
+\begin{tikzpicture}[scale=2,transform shape]
+\draw (0,0) \Fin;
+\draw (-1em,-1ex) -- (1em,-1ex);
+\path[scope fading=south] (-1em,-0.25em) rectangle (1em,-3.75ex);
+\draw[yscale=-1] (0,2ex) \Fin;
+\end{tikzpicture}
+\vspace*{\stretch{1}}
+
+\end{minipage}

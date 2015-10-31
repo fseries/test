@@ -1,0 +1,99 @@
+\begin{minipage}{0.45\textwidth}
+\thispagestyle{sujet1}
+
+\vspace*{1em}
+
+\paragraph{Exercice~1} \hfill \emph{4 points}
+
+Un élève a voulu tracer un parallélogramme $ABCD$ mais il ne sait pas où placer le sommet $C$.\\ Comment pouvez-vous l'aider~?\\ Vous détaillerez votre démarche sur votre copie avant de réaliser des calculs.
+
+\begin{center}
+
+\begin{tikzpicture}[scale=1,every node/.style={scale=1}]
+
+%\coordinate (X) at (-0.5,-0.5);
+%\coordinate (Y) at (13,13);
+%\clip (X) rectangle (Y);
+\placerpoint{A}{1}{1}{below left};
+\placerpoint{B}{10}{5}{above right};
+\placerpoint{D}{4}{5}{above left};
+%\placerpoint{M}{6}{4}{above left};
+%\placerpoint{C}{11}{7}{below right};
+%\draw[very thick,red] (A) -- (B) -- (C) -- (D) -- cycle;
+\repereOIJ{-1}{11}{-1}{6};
+\foreach \r in {5,10}
+    \draw[thick, below right] (\r,0) node{\r};
+\foreach \r in {5}
+    \draw[thick, above left] (0,\r) node{\r};
+
+\end{tikzpicture}
+
+\end{center}
+
+
+\vspace*{2em}
+
+\paragraph{Exercice~2} \hfill \emph{6 points}
+
+On se place dans le repère~\emph{orthonormé}\rep{O}{I}{J}. Dans ce repère, on considère les points $\pointcoord{A}{3}{0}$, $\pointcoord{B}{2}{-3}$ et $\pointcoord{C}{-10}{3}$.\\Vos réponses seront argumentées.
+
+	\begin{enumerate}
+		\item Le point $A$ appartient-il au cercle $\mathscr{C}$ de centre $C$ passant par~$B$~?
+		\item Le point $C$ appartient-il à la médiatrice de $\left[AB\right]$~?
+%		\item Déterminer les coordonnées de $Z$ pour que $AZBC$ soit un parallélogramme.
+	\end{enumerate}
+
+
+
+\vspace{-2em}
+
+
+\end{minipage}
+\newpage
+
+\vspace*{1em}
+
+\begin{minipage}{0.45\textwidth}
+\thispagestyle{sujet1}
+
+\vspace*{1em}
+
+%\paragraph{Exercice~4} 
+%
+%On se place dans le repère \emph{orthonormé}\rep{O}{I}{J}. $ABCD$ est un rectangle de centre $O$. $A$ est tel que son abscisse est négative et son ordonnée positive. Le côté $AB$ est parallèle à l'axe des ordonnées. Pour chaque question, faire une figure en prenant $AB = 4 cm$ et $AD = 6 cm$. Donner les coordonnées des points $A$, $B$, $C$, $D$, $O$, $I$ et $J$~:
+%	\begin{enumerate}
+%		\item Dans le repère\rep{O}{I}{J}
+%		\item Dans le repère\rep{B}{C}{A}
+%		\item Dans le repère\rep{A}{B}{D}
+%	\end{enumerate}
+
+%\vspace{-2em}
+
+\paragraph{Exercice~3} \hfill \emph{10 points}
+
+Le plan $\left(\mathscr{P}\right)$ est muni d'un repère~\emph{orthonormé}\rep{O}{I}{J}.\\ Dans ce repère, on considère les points suivants $\pointcoord{A}{19}{26}$ ; $\pointcoord{B}{-26}{41}$ et $\pointcoord{C}{4}{-19}$.
+On désigne par $D$, $E$ et $F$ les milieux respectifs des segments $\left[AB\right]$,  $\left[BC\right]$ et $\left[AC\right]$.
+
+\begin{enumerate}
+	\item Démontrer que le triangle $ABC$ est rectangle isocèle.
+	\item Calculer les coordonnées des points $D$, $E$ et $F$ dans le repère\rep{O}{I}{J}.
+	\item Démontrer que le quadrilatère $ADEF$ est un carré.
+	\item En déduire la nature du triangle $DEF$.
+	\item Déterminer les coordonnées des points $A$, $B$, $C$, $D$, $E$ et $F$ dans le~repère\rep{A}{B}{C}.
+	\item Pourquoi peut-on calculer des distances dans le~repère\rep{A}{B}{C}~?
+\end{enumerate}
+
+\vspace*{2em}
+
+\vspace*{\stretch{1}}
+\centering
+\begin{tikzpicture}[scale=2,transform shape]
+\draw (0,0) \Fin;
+\draw (-1em,-1ex) -- (1em,-1ex);
+\path[scope fading=south] (-1em,-0.25em) rectangle (1em,-3.75ex);
+\draw[yscale=-1] (0,2ex) \Fin;
+\end{tikzpicture}
+\vspace*{\stretch{1}}
+
+
+\end{minipage}
